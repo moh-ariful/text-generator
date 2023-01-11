@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center">Search Results</h2>
+
+    {% if error_message %}
+      <div class="text-center">{{ error_message }}</div>
+    {% else %}
+      {% for answer in query_list %}
+        <div class="card my-3">
+          <div class="card-header">{{ answer.tanya }}</div>
+          <div class="card-body">{{ answer.jawab }}</div>
+        </div>
+      {% endfor %}
+      {% if not query_list %}
+        <div class="text-center">No results found</div>
+      {% endif %}
+    {% endif %}
+  </div>
+  {% endblock content %}

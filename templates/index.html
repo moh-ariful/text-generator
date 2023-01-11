@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    {% if message %}
+        <div class="alert alert-success">
+            <pre class="pre-scrollable">
+                {{ message }}
+            </pre>
+        </div>
+    {% endif %}
+    {% if error_message %}
+        <div class="alert alert-danger">
+            <pre class="pre-scrollable">
+                {{ error_message }}
+            </pre>
+        </div>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="prompt">Pertanyaan:</label>
+            <input type="text" class="form-control mt-2" id="prompt" name="prompt" placeholder="Masukkan pertanyaan Anda di sini" style="white-space: pre-line;">
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Kirim</button>
+    </form>
+ </div>
+
+</div>
+{% endblock content %}
