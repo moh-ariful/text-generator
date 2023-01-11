@@ -30,8 +30,8 @@
             {% endif %}
           </ul>
           <form class="d-flex" role="search" method="get" action="{% url 'search' %}">
-            <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search" value="{{ request.GET.q }}">
-            <button class="btn btn-outline-warning" type="submit">Search</button>
+            <input class="form-control-lg me-2" type="search" name="q" placeholder="Search" aria-label="Search" value="{{ request.GET.q }}">
+            <button class="btn btn-outline-warning btn-lg" type="submit">Search</button>
           </form>
 
         </div>
