@@ -10,7 +10,12 @@
       {% for answer in query_list %}
         <div class="card my-3">
           <div class="card-header">{{ answer.tanya }}</div>
-          <div class="card-body">{{ answer.jawab }}</div>
+          <div class="alert alert-success">
+            <pre class="pre-scrollable">
+                {{ answer.jawab }}
+            </pre>
+        </div>
+
         </div>
       {% endfor %}
       {% if not query_list %}
