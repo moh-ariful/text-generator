@@ -6,7 +6,7 @@ from django.views.generic import View
 from django.db.models import Q
 
 
-openai.api_key = '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'
+openai.api_key = ''
 
 @login_required
 def index(request):
