@@ -40,16 +40,17 @@ class SearchView(View):
     def get(self, request, *args, **kwargs):
         query = self.request.GET.get('q')
         error_message = ""
+        query_list = None
         if not query:
-            error_message = "Error: No query entered"
+             error_message = "Error: No query entered"
         else:
             if request.user.is_authenticated:
                 query_list = Answer.objects.filter(
-                Q(tanya__icontains=query) |
-                Q(jawab__icontains=query)
-            )
+                    Q(tanya__icontains=query) |
+                    Q(jawab__icontains=query)
+                    )
             else:
-                query_list = None
+                 error_message = "Error: User not authenticated"
 
         context = {
             'error_message': error_message,
