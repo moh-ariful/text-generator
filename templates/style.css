@@ -1,0 +1,22 @@
+
+	.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: #000000; /* warna hitam */
+    color: #ffffff; /* warna putih */
+    text-align: center;
+}
+.navbar {
+    background-color: black;
+}
+
+.navbar a, .navbar button {
+    color: white;
+}
+.login-link, .logout-link {
+    color: white;
+  }
+
